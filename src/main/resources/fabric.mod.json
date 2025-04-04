@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "droppable_spawn_eggs",
+	"version": "${version}",
+	"name": "Droppable Spawn Eggs",
+	"description": "This simple mod makes it so mobs can drop spawn eggs on rare occasions!",
+	"authors": [
+		"REBELSPARK279"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "GNU General Public License v3.0",
+	"icon": "assets/droppable_spawn_eggs/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.rebelspark.droppable_spawn_eggs.DroppableSpawnEggs"
+		],
+		"fabric-datagen": [
+			"net.rebelspark.droppable_spawn_eggs.DroppableSpawnEggsDataGenerator"
+		],
+		"client": [
+			"net.rebelspark.droppable_spawn_eggs.DroppableSpawnEggsClient"
+		]
+	},
+	"mixins": [
+		"droppable_spawn_eggs.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.12",
+		"minecraft": "~1.21.5",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
