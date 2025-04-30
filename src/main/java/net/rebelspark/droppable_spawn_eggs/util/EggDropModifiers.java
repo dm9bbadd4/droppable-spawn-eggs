@@ -630,7 +630,7 @@ public class EggDropModifiers {
             }
             if(ZOMBIE_HORSE.equals(key.getValue())) { LootPool.Builder poolBuilder = LootPool.builder()
                     .rolls(ConstantLootNumberProvider.create(1))
-                    .conditionally(RandomChanceLootCondition.builder(0.0005f))
+                    .conditionally(RandomChanceLootCondition.builder(1.0f))
                     .with(ItemEntry.builder(Items.ZOMBIE_HORSE_SPAWN_EGG)).apply(SetCountLootFunction
                             .builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
